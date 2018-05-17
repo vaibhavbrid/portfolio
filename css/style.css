@@ -1,0 +1,325 @@
+.body {
+    font-size: 14px;
+    color: black;
+    background-color: white;
+    letter-spacing: 2px;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.titleMessage {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    top: 50%;
+    z-index: 5;
+    text-align: center;
+    margin-top: -125px;
+}
+
+.slides-navigation {
+    z-index: 6;
+}
+
+.titleMessage .heading p {
+    color: rgb(230, 82, 38);
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+    font-weight: 100;
+    letter-spacing: 7px;
+}
+
+.main {
+    font-size: 50px;
+}
+
+.sub {
+    font-size: 23px;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.aboutImage {
+    max-width: 100%;
+}
+
+.skillsSection, .contactSection {
+    background-color: #d35400;
+}
+
+.skill {
+    text-align: center;
+    margin-left: 10px;
+}
+
+.chart {
+    position: relative;
+    width: 152px;
+    height: 152px;
+    display: inline-block;
+    text-align: center;
+}
+
+.chart canvas {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.chart .percent {
+    color: #000;
+    line-height: 152px;
+    display: inline-block;
+    font-size: 35px;
+}
+
+.chart .percent:after {
+    content: '%';
+}
+
+.squareItem {
+    margin-top: 30px;
+    position: relative;
+}
+
+.squareInnerContainer {
+    position: relative;
+    padding: 50px 15px 35px;
+    text-align: center;
+    border: 2px solid black;
+    border-top: none;
+}
+
+.squareInnerContainer:before,
+.squareInnerContainer:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    width: 30px;
+    border-bottom: 2px solid black;
+}
+
+.squareInnerContainer:before {
+    right: 0px;
+}
+
+.squareInnerContainer:after {
+    left: 0px;
+}
+
+.squareContent h2 {
+    font-size: 56px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color:#d35400;
+}
+
+.squareContent h3 {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.squareIcon {
+    position: absolute;
+    left: 50%;
+    top: -30%;
+    width: 40%;
+    height: 60px;
+    font-size: 60px;
+    margin-left: -20%;
+    color: black;
+}
+
+.contactButton {
+    color: white;
+    padding: 5px;
+    border: 2px solid white;
+    display: inline-block;
+    margin: 20px;
+    border-radius: 3px;
+}
+
+.filter a {
+	color: #bdc3c7;
+	border: 1px solid #bdc3c7;
+	padding: 10px 18px;
+	display: block;
+}
+
+.filter li {
+	display: inline-block;
+	padding: 5px
+}
+
+.filter .current {
+	background-color: #e74c3c;;
+	border-color: #e74c3c;
+	color: #fff;
+}
+
+.filter {
+	text-align: center;
+	width: 100%;
+}
+
+.section .heading {
+	text-align: center;
+	padding-bottom: 40px;
+	width: 100%;
+}
+
+.items li {
+	display: inline-block;
+	padding: 5px;
+}
+
+.itemsContainer {
+	width: 100%;
+}
+
+
+.items li img {
+	width: 100%;
+	-webkit-transition: all 0.2s linear, 1s;
+    -moz-transition: all 0.2s linear, 1s;
+    -o-transition: all 0.2s linear, 1s;
+    -ms-transition: all 0.2s linear, 1s;
+    -transition: all 0.2s linear, 1s;
+}
+
+.items .item {
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+
+.items .icons {
+	position: absolute;
+    width: 90px;
+    height: 40px;
+    left: 50%;
+    top: 50%;
+    margin: -20px auto 0 -47px;
+    text-align: center;
+    z-index: 3;
+}
+
+.items .icons i {
+	color: #fff;
+    font-size: 20px;
+    margin-top: 9px;
+}
+
+.items a {
+	width: 40px;
+    height: 40px;
+    background-color: #e74c3c;
+    position: relative;
+    display: inline-block;
+
+
+    -webkit-transition: all 0.2s linear, 0.2s;
+    -moz-transition: all 0.2s linear, 0.2s;
+    -o-transition: all 0.2s linear, 0.2s;
+    -ms-transition: all 0.2s linear, 0.2s;
+    -transition: all 0.2s linear, 0.2s;
+
+}
+
+.items .imageOverlay {
+	width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+
+    -webkit-transition: all 0.2s linear, 1s;
+    -moz-transition: all 0.2s linear, 1s;
+    -o-transition: all 0.2s linear, 1s;
+    -ms-transition: all 0.2s linear, 1s;
+    -transition: all 0.2s linear, 1s;
+}
+
+.items .item:hover .imageOverlay {
+	opacity: 1;
+}
+
+.items .openButton {
+	float: left;
+	left: -200px;
+}
+
+.items .projectLink {
+	float: right;
+	right: -200px;
+}
+
+.items .item:hover .openButton {
+	left: 0px;
+}
+
+.items .item:hover .projectLink {
+	right: 0px;
+}
+
+.items .item:hover img {
+	-webkit-transform: scale(1.05, 1.05);
+    -moz-transform: scale(1.05, 1.05);
+    -o-transform: scale(1.05, 1.05);
+    -ms-transform: scale(1.05, 1.05);
+    -transform: scale(1.05, 1.05);
+}
+
+.items {
+	padding: 0;
+}
+
+.copyrightSection {
+    background-color: black;
+    color: white;
+    padding: 30px 5px;
+}
+
+.copyrightSection p {
+    margin: 0;
+}
+
+#navigation {
+    background-color: #e74c3c;
+    padding: 20px 10px;
+    z-index: 100;
+    width: 100%;
+}
+
+.nav-link {
+    color: white;
+}
+
+#navigation li {
+    padding: 0 10px;
+}
+
+.navbar-brand,
+.navbar-brand:hover {
+    color: white;
+}
+
+.navbar-toggler-icon {
+    background: url(../img/menu-icon.png);
+    background-size: 100%;
+}
+
+.fixedNav #navigation {
+    position: fixed;
+    top: 0;
+}
