@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
     $('#slides').superslides({
         animation: 'fade',
@@ -6,24 +6,24 @@ $(document).ready(function(){
     });
 
     const typed = new Typed('.sub', {
-        strings: ["Software Developer", "Web Developer", "Tech Savvy"],
+        strings: ["Software Developer", "Web Developer", "Loves Technology"],
         typeSpeed: 50,
         loop: true
     })
 
     $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:true,
-        responsive:{
-            0:{
-                items:1
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1
             },
-            600:{
-                items:3
+            600: {
+                items: 3
             },
-            1000:{
-                items:5
+            1000: {
+                items: 5
             }
         }
     })
@@ -33,8 +33,7 @@ $(document).ready(function(){
     const skillTopOffset = boundingValuesSkillsSection.top + window.scrollY;
 
     window.addEventListener("scroll", () => {
-        if(window.pageYOffset > skillTopOffset - (window.innerHeight + 200))
-        {
+        if (window.pageYOffset > skillTopOffset - (window.innerHeight + 200)) {
             $('.chart').easyPieChart({
                 easing: 'easeInOut',
                 barColor: '#fff',
@@ -42,7 +41,7 @@ $(document).ready(function(){
                 scaleColor: false,
                 lineWidth: 4,
                 size: 152,
-                onStep: function(from, to, percent) {
+                onStep: function (from, to, percent) {
                     $(this.el).find('.percent').text(Math.round(percent));
                 }
             });
@@ -55,12 +54,11 @@ $(document).ready(function(){
 
     const statsCountElement = document.querySelectorAll('.statsCountValue');
     const arrayNodes = [...statsCountElement];
-    let statsUpdated = false; 
+    let statsUpdated = false;
     window.addEventListener("scroll", () => {
         console.log(statsTopOffset, window.pageYOffset, window.innerHeight);
-        console.log(window.pageYOffset > (statsTopOffset - (window.innerHeight + 200)));   
-        if((window.pageYOffset > (statsTopOffset - (window.innerHeight + 200))) && !statsUpdated)
-        {            
+        console.log(window.pageYOffset > (statsTopOffset - (window.innerHeight + 200)));
+        if ((window.pageYOffset > (statsTopOffset - (window.innerHeight + 200))) && !statsUpdated) {
             arrayNodes.map(countElement => {
                 const statsCountValue = countElement.innerHTML;
                 console.log(statsCountValue);
@@ -78,34 +76,34 @@ $(document).ready(function(){
     $("[data-fancybox]").fancybox();
 
 
-	$(".items").isotope({
-		filter: '*',
-		animationOptions: {
-			duration: 1500,
-			easing: 'linear',
-			queue: false
-		}
-	});
-
-	$("#filters a").click(function() {
-
-		$("#filters .current").removeClass("current");
-		$(this).addClass("current");
-
-		var selector = $(this).attr("data-filter");
-
-		$(".items").isotope({
-			filter: selector,
-			animationOptions: {
-				duration: 1500,
-				easing: 'linear',
-				queue: false
-			}
-		});
-
-		return false;
+    $(".items").isotope({
+        filter: '*',
+        animationOptions: {
+            duration: 1500,
+            easing: 'linear',
+            queue: false
+        }
     });
-    
+
+    $("#filters a").click(function () {
+
+        $("#filters .current").removeClass("current");
+        $(this).addClass("current");
+
+        var selector = $(this).attr("data-filter");
+
+        $(".items").isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 1500,
+                easing: 'linear',
+                queue: false
+            }
+        });
+
+        return false;
+    });
+
     const nav = $("#navigation");
     const navTop = nav.offset().top;
 
@@ -114,7 +112,7 @@ $(document).ready(function(){
     function stickyNavigation() {
         const body = $("body");
 
-        if($(window).scrollTop() >= navTop) {
+        if ($(window).scrollTop() >= navTop) {
             body.css("padding-top", nav.outerHeight() + "px");
             body.addClass("fixedNav");
         }
@@ -122,8 +120,8 @@ $(document).ready(function(){
             body.removeClass("fixedNav");
         }
     }
-    
-    $("#navigation li a").click(function(e) {
+
+    $("#navigation li a").click(function (e) {
         e.preventDefault();
 
         const targetElement = $(this).attr("href");

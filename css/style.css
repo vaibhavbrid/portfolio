@@ -323,3 +323,7 @@
     position: fixed;
     top: 0;
 }
+
+.square-item-column {
+    margin: auto
+}
